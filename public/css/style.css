@@ -11,7 +11,7 @@ body{
 
 .navbar{
     height: 5rem;
-    background-color:white;
+    background-color:rgb(244, 13, 13);
 }
 .fa-compass,
 .navbar-brand-coustom
@@ -171,6 +171,9 @@ body{
 
 /* navbar */
 
+  .navbar{
+    
+  }
   .search-btn{
     background-color: #fe424d;
     color:#fff;
