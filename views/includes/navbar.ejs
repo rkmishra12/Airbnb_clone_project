@@ -1,51 +1,42 @@
-<nav class="navbar navbar-expand-md navbar-light bg-body-light border-bottom sticky-top shadow-sm" style="z-index: 1030;">
-  <div class="container-fluid">
-    <!-- Brand -->
-    <a class="navbar-brand" href="/listings" aria-label="Airbnb Home">
-      <i class="fa-regular fa-compass"></i> &nbsp; AirBnb
-    </a>
 
-    <!-- Toggler/collapsibe Button -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+
+
+
+
+<nav class="navbar navbar-expand-md border-bottom bg-body-light sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand-coustom " href="/listings"><i class="fa-regular fa-compass"></i> AirBnb &nbsp; &nbsp;</a>
+      <button 
+      class="navbar-toggler" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" >
       <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Navbar links -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <!-- Left nav -->
-      <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        <li class="nav-item">
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="height: 275px; background-color: white;">
+        <div class="navbar-nav">
           <a class="nav-link" href="/listings">Explore all</a>
-        </li>
-      </ul>
+        </div>
 
-      <!-- Center Search -->
-      <form class="d-flex mx-auto" role="search" action="/search" method="get">
-        <input class="form-control me-2 search-input" type="search" placeholder="Search destinations" aria-label="Search" name="search">
-        <button class="btn btn-outline-primary search-btn" type="submit">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-      </form>
+        <div class="navbar-nav ms-auto">
+          <form class="d-flex" role="search" action="/search" method="get">
+            <input class="form-control me-2 search-input" type="search" placeholder="Search destinations" aria-label="Search" name="search">
+            <button class="btn search-btn" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>Search</button>
+          </form>
+        </div>
 
-      <!-- Right nav -->
-      <ul class="navbar-nav ms-auto mb-2 mb-md-0">
-        <li class="nav-item">
-          <a class="nav-link" href="/listings/new">Airbnb your home</a>
-        </li>
-        <% if (!currUser) { %>
-          <li class="nav-item">
-            <a class="nav-link" href="/signup"><strong>Sign up</strong></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/login"><strong>Log in</strong></a>
-          </li>
-        <% } else { %>
-          <li class="nav-item">
-            <a class="nav-link" href="/logout"><strong>Log out</strong></a>
-          </li>
-        <% } %>
-      </ul>
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link " href="/listings/new">AiRbnB  your home</a>
+          <% if(!currUser){ %>
+            <a class="nav-link " href="/signup"><b>Sign up</b></a>
+            <a class="nav-link" href="/login"><b>Log in</b></a>
+          <% }else { %>
+            <a class="nav-link" href="/logout"><b>Log out</b></a>
+            <% } %>
+        </div>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
